@@ -1,15 +1,23 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.coopnex</groupId>
-  <artifactId>hortus-api</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <properties>
-		<scrab.version>0.1</scrab.version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.coopnex</groupId>
+	<artifactId>hortus-api</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<repositories>
+		<repository>
+			<id>coopnex-releases</id>
+			<name>Coopnex Releases</name>
+			<url>http://nexus.coopnex.com/content/repositories/releases</url>
+		</repository>
+	</repositories>
+	<properties>
+		<scrab.version>0.3</scrab.version>
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.coopnex</groupId>
+			<groupId>com.coopnex.scrab</groupId>
 			<artifactId>scrab-rest</artifactId>
 			<version>${scrab.version}</version>
 		</dependency>
@@ -47,13 +55,13 @@
 				</configuration>
 			</plugin>
 			<plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-compiler-plugin</artifactId>
-	            <configuration>
-	                <source>1.6</source>
-	                <target>1.6</target>
-	            </configuration>
-	        </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
